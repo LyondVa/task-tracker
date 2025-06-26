@@ -38,6 +38,9 @@ android {
     buildFeatures {
         compose = true
     }
+    composeOptions {
+        kotlinCompilerExtensionVersion = "1.5.15"
+    }
 }
 
 dependencies {
@@ -57,6 +60,8 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+    implementation (libs.androidx.appcompat)
+    implementation (libs.material)
 
     //DI
     implementation(libs.hilt.android)
@@ -69,4 +74,11 @@ dependencies {
 
     //Timber
     implementation (libs.timber)
+
+    //reorderable
+    implementation(libs.reorderable)
+
+    //Glance
+    implementation (libs.androidx.glance.appwidget)
+    implementation (libs.androidx.glance.material3)
 }
