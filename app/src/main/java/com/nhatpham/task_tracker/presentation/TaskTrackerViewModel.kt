@@ -78,19 +78,6 @@ class TaskTrackerViewModel @Inject constructor(
             }
         }
     }
-
-    fun clearError() {
-        _state.value = _state.value.copy(
-            allTasksResource = Resource.Idle,
-            createTaskResource = null,
-            updateTaskResource = null,
-            deleteTaskResource = null
-        )
-    }
-
-    fun clearState() {
-        //TODO
-    }
 }
 
 data class TaskTrackerState(
